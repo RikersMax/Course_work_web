@@ -7,8 +7,8 @@ class CreateServiceStars < ActiveRecord::Migration[7.1]
       t.integer :star_3, default: 0
       t.integer :star_4, default: 0
       t.integer :star_5, default: 0
-      t.integer :avg_score
-      t.integer :count_stars
+      t.integer :avg_score, default: 0
+      t.integer :count_stars, default: 0
       t.index [:service_category_id], unique: true, name: 'add_my_constraint_unique_user_id'
 
       t.timestamps

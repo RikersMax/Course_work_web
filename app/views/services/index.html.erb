@@ -1,12 +1,4 @@
-<p>ok doc</p>
-<p>timestamp - <%= Time.now.to_i%></p>
-<p><%= params[:name]  %></p>	
-<p><%= params[:number] %></p>
-<hr>
-<hr>
-<p><%= params.keys  %></p>
-
-
+<h1>services#index</h1>
 <%@services.each do |item| %>
 	<p><%= item.id %></p>
 	<p><%= item.name %></p>
@@ -16,6 +8,6 @@
 	<p><%= item.created_at %></p>
 	<p><%= item.updated_at %></p>
 	<hr>
-	<p><%= item.service_categories[0] %></p>
+	<p><%= item.service_categories[0] || 'not categories' %></p>
 	<hr>
 <% end %>

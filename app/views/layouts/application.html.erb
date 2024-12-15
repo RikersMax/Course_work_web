@@ -11,6 +11,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper">        
+      <header>
+        <div>
+          <span>header</span>
+        </div>
+      </header>
+
+      <main>
+        <%= yield %>      
+      </main>
+
+      <footer>
+        <span>footer</span>
+      </footer>
+    </div>
   </body>
 </html>

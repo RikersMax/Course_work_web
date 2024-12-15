@@ -16,6 +16,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_07_100032) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.string "url_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,8 +38,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_07_100032) do
     t.integer "star_3", default: 0
     t.integer "star_4", default: 0
     t.integer "star_5", default: 0
-    t.integer "avg_score"
-    t.integer "count_stars"
+    t.integer "avg_score", default: 0
+    t.integer "count_stars", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["service_category_id"], name: "add_my_constraint_unique_user_id", unique: true
@@ -47,6 +48,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_07_100032) do
 
   create_table "services", force: :cascade do |t|
     t.string "name"
+    t.text "body"
     t.text "description"
     t.string "url_img"
     t.text "url_addres"
