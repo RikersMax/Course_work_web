@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CourseWorkWeb</title>
+    <title><%= title_page(yield(:title_name))  %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,10 +12,8 @@
 
   <body>
     <div class="wrapper">        
-      <header>
-        <div>
-          <span>header</span>
-        </div>
+      <header>        
+          <%= yield(:nav_bar)  %>                
       </header>
 
       <main>

@@ -1,0 +1,19 @@
+en:
+  nav_bar:
+  links:
+    category: 'Categories'
+    service: 'Services'
+    
+  name_page:
+      headers: 
+        category: 'Categories'
+        service: 'Services' 
+
+
+  category:
+    manik: 'manicure'
+    pedikur: 'pedicure'
+    restnichki: 'Cilia'
+    narashivanie_volos: 'hair coloring'
+    okrashivanie_volos: 'hair extensions'
+    make_up: 'Make Up'

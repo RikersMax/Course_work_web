@@ -1,13 +1,74 @@
+<% provide(:title_name, t('name_page.headers.service')) %>
+<% render_navbar  %>
+
+
+<article class="main-container-service">
+	
 <h1>services#index</h1>
-<%@services.each do |item| %>
-	<p><%= item.id %></p>
-	<p><%= item.name %></p>
-	<p><%= item.description %></p>
-	<p><%= item.url_img %></p>
-	<p><%= item.url_addres %></p>
-	<p><%= item.created_at %></p>
-	<p><%= item.updated_at %></p>
-	<hr>
-	<p><%= item.service_categories[0] || 'not categories' %></p>
-	<hr>
+<%@services_categories.each do |item| %>
+	<section class="container-service">
+					
+		
+		<div class="service-card-name">
+			<span><%= item.service.name %></span>			
+		</div>
+
+		<div class="service-card-div">				
+			<div class="service-card-info">
+				<span>Сайт</span>
+				
+				<span><%= item.service.url_addres %></span>
+			</div>
+		</div>
+
+		<div class="service-card-div">				
+			<div class="service-card-info">
+				<span>Звезды</span>
+				
+				<span>*****</span>
+			</div>
+		</div>
+
+		<div class="service-card-div">
+			<div class="service-card-img">
+				<%= image_tag(src='https://thumb.tildacdn.com/tild6235-3534-4731-b865-356632393537/-/cover/860x550/center/center/-/format/webp/DSCF8583.jpg', class: 'service-img') %>
+			</div>
+		</div>
+
+		<div class="service-card-div">
+			<div class="service-card-desc">
+				
+				<%= content_tag(:p, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vero tempore quod ipsam hic eaque id, sunt vel, magnam et nam quisquam expedita voluptatem reprehenderit nihil iusto sequi. In, reprehenderit.'  , class: 'service-desc') %>
+				
+			</div>
+			
+		</div>
+
+	
+		<div class="service-card-name">
+				<p>Услуги</p>
+		</div>
+
+		<div class="service-card-div">
+			<div class="service-card-info">
+				<hr style="width: 100%; color: #ff9999;">			
+			</div>
+		</div>
+
+		<div class="service-card-div">
+			<%= render(
+				partial: 'shared/category', 
+				locals: {categories: item.category, 
+				stars: '*****'}) 
+			%>			
+		</div>
+			
+		
+		
+
+	</section>
 <% end %>
+
+
+
+</article>

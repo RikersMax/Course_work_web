@@ -1,14 +1,5 @@
+<% provide(:title_name, t('name_page.headers.service')) %>
+<% render_navbar  %>
+
 <h1>root pasge</h1>
 <h1>Pages#index</h1>
-<%@services.each do |item| %>
-	<p><%= item.id %></p>
-	<p><%= item.name %></p>
-	<p><%= item.description %></p>
-	<p><%= item.url_img %></p>
-	<p><%= item.url_addres %></p>
-	<p><%= item.created_at %></p>
-	<p><%= item.updated_at %></p>
-	<hr>
-	<p><%= item.service_categories[0] || 'not categories' %></p>
-	<hr>
-<% end %>

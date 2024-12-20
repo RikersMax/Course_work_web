@@ -1,0 +1,38 @@
+<%= provide(:nav_bar) do %>
+
+<article class="nav-bar-container">
+	<section class="nav-bar-logo">
+		<div class="nav-logo">
+			<%= link_to(root_path) do %>
+				<div id="container-logo">					
+					<%= image_tag('logo/logo.png', size: "50x50") %>
+					<div id="text-logo">
+						<span>Beauty</span>
+						<span>Orsk</span>
+					</div>
+				</div>	
+			<% end %>										
+		</div>
+	</section>
+
+	<section class="nav-bar-links">
+		<div class="nav-links">
+			<ul>
+				<li><%= link_to(t('nav_bar.links.category'), categories_path) %></li>
+				<li><%= link_to(t('nav_bar.links.service'), services_path) %></li>
+				<li><%= link_to('test_3', '#') %></li>
+				<li><%= link_to('test_4', '#') %></li>
+			</ul>
+			
+		</div>
+	</section>
+
+	<section class="nav-bar-login">
+		<div class="nav-login">
+			<%= link_to('login', '#')  %>
+		</div>
+	</section>
+</article>
+	
+
+<% end %>

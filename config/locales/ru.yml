@@ -1,0 +1,19 @@
+ru:
+  nav_bar:
+    links:
+      category: 'Категории'
+      service: 'Сервисы'
+
+  name_page:  
+      headers: 
+        category: 'Категории'
+        service: 'Сервисы'
+
+  category:
+    manik: 'Маникюр'
+    pedikur: 'Педикюр'
+    resnichiki: 'Наращивание ресниц'
+    narashivanie_volos: 'Наращивание волос'
+    okrashivanie_volos: 'Окрашивание волос'
+    make_up: 'Make Up'
+

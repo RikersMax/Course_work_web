@@ -4,11 +4,12 @@
 	grid-template-rows: auto 1fr auto;
 }
 
-header {
+header {	
 	grid-column: 1/13;
 	grid-row: 1;
 	background-color: #142936;
 	color: white;
+
 }
 
 main {
