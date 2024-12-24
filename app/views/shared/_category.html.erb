@@ -1,17 +1,22 @@
-<% categories.each do |category| %>
+<% service_and_categories.each do |serv_cate| %>
 	<div class="card-categoryies">
 		<figure>
-			<%= image_tag(category.url_img, class: 'card-image') %>	
-			<figcaption class="name-card"><%= t("category.#{category.name}") %></figcaption>				
+			<%= image_tag(serv_cate.category.url_img, class: 'card-image') %>	
+			<figcaption class="name-card"><%= t("category.#{serv_cate.category.name}") %></figcaption>				
 		</figure>		
 		
 		<div class="footer-card">
-			<div>
-				<%= stars %>
+			<div class="rating-result">
+				<%= render(
+					partial: 'shared/stars_result', 
+					locals: {rainig_: serv_cate.service_star&.avg_score.to_i}
+				)%>	
 			</div>
+
 			<div>
-				<%= category.service_categories.each {|ser_cat| ser_cat.service_star} %>
+				<%= serv_cate.service_star&.avg_score || 'not stars'  %>						
 			</div>
+			
 		</div>
 	</div>
 

@@ -3,7 +3,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-
+=begin
 6.times do |i|
   Service.create({
     name: "name #{i}",
@@ -58,3 +58,10 @@ end
 puts ('create service stars')
 
 puts('data entered into the database')
+
+
+ServiceCategory.all.each do |ser_cal|
+  ser_cal.service_star = ServiceStar.new
+
+end
+=end

@@ -1,0 +1,8 @@
+<div class="rating-result">
+	<% rainig_.times do  %>		
+		<%= content_tag(:span, nil, class: 'active') %>
+	<% end %>
+	<% (5 - rainig_).times do %>
+		<%= content_tag(:span, nil) %>
+	<% end %>
+</div>
