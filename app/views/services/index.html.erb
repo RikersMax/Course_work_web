@@ -3,8 +3,13 @@
 
 
 <article class="main-container-service">
-	
-<h1>services#index</h1>
+	<section>	
+		<div class="header-page-container">
+			<strong class="header-page-name"><%= t('name_page.headers.service') %></strong>		
+		</div>
+	</section>	
+
+
 <%@services.each do |item| %>
 	<section class="container-service">
 						
@@ -22,11 +27,15 @@
 
 		<div class="service-card-div">				
 			<div class="service-card-info">
-				<span>Звезды</span>
-				<%= render(
-					partial: 'shared/stars_service',
-					locals: {stars: item.service_category_ids}
-				)  %>				
+				
+				<span class="service-card-info-stars">Звезды</span>					
+				
+				<div class="service-card-stars">
+					<%= render(
+						partial: 'shared/stars_service',
+						locals: {service_category_ids: item.service_category_ids}
+					)  %>				
+				</div>					
 			</div>
 		</div>
 

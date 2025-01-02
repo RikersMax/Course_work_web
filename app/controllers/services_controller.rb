@@ -1,10 +1,8 @@
 class ServicesController < ApplicationController
 
   def index
-    @services = Service.all
-    #@hash_id = {}
-    #@services.each {|service| @hash_id[service.id] = service.service_category_ids}
-    #@services_categories = ServiceCategory.find_by(id: @hash_id[1])
+    @service_satars_avg = nil
+    @services = Service.all 
   end
 
   def show_id_several

@@ -1,2 +1,78 @@
-<h1>show services several</h1>
-<%= @services_find_by_id_several %>
+<% provide(:title_name, t('name_page.headers.service')) %>
+<% render_navbar  %>
+
+
+<article class="main-container-service">
+	<section>	
+		<div class="header-page-container">
+			<strong class="header-page-name"><%= t('name_page.headers.service') %></strong>		
+		</div>
+	</section>	
+	
+<%@services_find_by_id_several.each do |item| %>
+	<section class="container-service">
+						
+		<div class="service-card-name">
+			<span><%= item.name %></span>			
+		</div>
+
+		<div class="service-card-div">				
+			<div class="service-card-info">
+				<span>Сайт</span>
+				
+				<span><%= item.url_addres %></span>
+			</div>
+		</div>
+
+		<div class="service-card-div">				
+			<div class="service-card-info">
+				
+				<span class="service-card-info-stars">Звезды</span>					
+				
+				<div class="service-card-stars">
+					<%= render(
+						partial: 'shared/stars_service',
+						locals: {service_category_ids: item.service_category_ids}
+					)  %>				
+				</div>					
+			</div>
+		</div>
+
+		<div class="service-card-div">
+			<div class="service-card-img">
+				<%= image_tag(src='https://thumb.tildacdn.com/tild6235-3534-4731-b865-356632393537/-/cover/860x550/center/center/-/format/webp/DSCF8583.jpg', class: 'service-img') %>
+			</div>
+		</div>
+
+		<div class="service-card-div">
+			<div class="service-card-desc">
+				
+				<%= content_tag(:p, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vero tempore quod ipsam hic eaque id, sunt vel, magnam et nam quisquam expedita voluptatem reprehenderit nihil iusto sequi. In, reprehenderit.'  , class: 'service-desc') %>
+			</div>
+		</div>
+	
+		<div class="service-card-name">
+				<p>Услуги</p>
+		</div>
+
+		<div class="service-card-div">
+			<div class="service-card-info">
+				<hr style="width: 100%; color: #ff9999;">			
+			</div>
+		</div>
+
+		<div class="service-card-div">
+			
+			<%= render(
+				partial: 'shared/category', 
+				locals: {service_and_categories: for_render_card_categories(item.service_category_ids)}
+				) 
+			%>			
+		</div>
+
+	</section>
+<% end %>
+
+
+
+</article>

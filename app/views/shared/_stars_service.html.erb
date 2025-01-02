@@ -1,1 +1,14 @@
-<span><%= avg_star_server(stars) %></span>
+<% @service_satars_avg = avg_star_server(service_category_ids) %>	
+
+<span style="font-weight: bold;"><%= @service_satars_avg %></span>
+
+<div class="rating-result">
+	
+<% @service_satars_avg.to_i.times do  %>		
+		<%= content_tag(:span, nil, class: 'active') %>
+<% end %>
+
+<% (5 - @service_satars_avg.to_i).times do %>
+		<%= content_tag(:span, nil) %>
+	<% end %>
+</div>
