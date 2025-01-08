@@ -1,19 +1,28 @@
 en:
   nav_bar:
-  links:
-    category: 'Categories'
-    service: 'Services'
+    links:
+      category: 'Categories'
+      service: 'Services'
     
   name_page:
       headers: 
         category: 'Categories'
-        service: 'Services' 
+        service: 'Services'
 
+  user:
+    drop_down_menu:
+      sign_up: 'Sign Up'
+      sign_in: 'Sign In'
+      exit: 'Exit'
 
   category:
     manik: 'manicure'
     pedikur: 'pedicure'
-    restnichki: 'Cilia'
+    resnichiki: 'Cilia'
     narashivanie_volos: 'hair coloring'
     okrashivanie_volos: 'hair extensions'
     make_up: 'Make Up'
+
+  flash:
+    message:
+      need_regidster: 'need register'

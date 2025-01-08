@@ -28,3 +28,6 @@ ol, ul, li {
     color: #000;
 }
 
+input[type=submit] {
+	font-size: 1em;
+}

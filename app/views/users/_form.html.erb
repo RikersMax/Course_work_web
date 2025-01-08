@@ -1,0 +1,39 @@
+<%= form_with(model: @user, method: 'POST', url: users_path, data: { turbo: false }) do |f| %>
+	<div class="form">
+		<div class="form__group">
+			<%= f.label(:name)  %>
+		</div>
+
+		<div class="form__group">
+			<%=f.text_field(:name, palaceholder: 'name', class: 'form__input')  %>
+		</div>
+
+		<div class="form__group">
+			<%= f.label(:email)  %>
+		</div>
+
+		<div class="form__group">
+			<%=f.email_field(:email, palaceholder: 'email', class: 'form__input')  %>
+		</div>
+
+		<div class="form__group">
+			<%= f.label(:password)  %>
+		</div>
+
+		<div class="form__group">
+			<%= f.password_field(:password, class: 'form__input')  %>
+		</div>
+
+		<div class="form__group">
+			<%= f.label(:password_confirmation)  %>
+		</div>
+
+		<div class="form__group">
+			<%= f.password_field(:password_confirmation, class: 'form__input')  %>
+		</div>
+
+		<div class="form__group">			
+			<%= f.submit('sign_up', class: "btn")  %>
+		</div>
+	</div>
+<% end %>

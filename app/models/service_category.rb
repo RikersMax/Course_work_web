@@ -1,5 +1,6 @@
 class ServiceCategory < ApplicationRecord
   after_create :create_stars
+  after_update :create_stars
 
   belongs_to :service
   belongs_to :category

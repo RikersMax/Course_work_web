@@ -3,7 +3,7 @@ class CreateUserStars < ActiveRecord::Migration[7.1]
     create_table :user_stars do |t|
       t.references :user, null: false, foreign_key: true
       t.references :service_category, null: false, foreign_key: true
-      t.integer :star
+      t.string :star, limit: 10
       t.index [:user_id, :service_category_id], unique: true
 
       t.timestamps

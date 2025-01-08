@@ -1,4 +1,4 @@
-module ApplicationHelper
+module ApplicationHelper  
 
   def title_page(name_title = '')
     base_name = 'WEB'

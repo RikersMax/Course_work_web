@@ -51,7 +51,7 @@ puts('add category to Service')
 ServiceCategory.all.each do |serv_cat|
   
   serv_star = ServiceStar.new
-  serv_star.service_category << serv_cat
+  serv_star.service_category = serv_cat
   serv_star.save
 
 end 

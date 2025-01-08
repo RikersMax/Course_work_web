@@ -1,0 +1,53 @@
+/* user-sign-up */
+
+.form {
+    margin-top: 40px;
+    border-radius: 6px;
+    overflow: hidden;    
+    animation: arrive 500ms ease-in-out 0.9s forwards;
+}
+
+.form__input {
+    display: block;
+    width: 60%;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 15px;
+
+}
+
+.btn {	
+    display: block;
+    padding: 0.75em;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: #ffcccc;
+    color: #ff6666 !important;
+    cursor: pointer;
+    margin: 1em 1em;
+}
+
+/* form-review */
+
+.form-review-container {
+    display: flex;
+    justify-content: center; 
+    background-color: #ff9999;
+    width: 90%;
+    line-height: 3em;
+}
+
+.form-review-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-review-radio-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-btn-container {
+    display: flex;
+    justify-content: center;    
+}

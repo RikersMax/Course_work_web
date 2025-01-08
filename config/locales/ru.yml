@@ -9,6 +9,12 @@ ru:
         category: 'Категории'
         service: 'Сервисы'
 
+  user:
+    drop_down_menu:
+      sign_up: 'Регистрация'
+      sign_in: 'Вход'
+      exit: 'Выход'                 
+
   category:
     manik: 'Маникюр'
     pedikur: 'Педикюр'
@@ -17,3 +23,6 @@ ru:
     okrashivanie_volos: 'Окрашивание волос'
     make_up: 'Make Up'
 
+  flash:
+    message:
+      need_regidster: 'Нужно зарегистрироваться'

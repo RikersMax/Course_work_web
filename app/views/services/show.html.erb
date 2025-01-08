@@ -1,3 +1,65 @@
-<h1>show services</h1>
+<% provide(:title_name, t('name_page.headers.service')) %>
+<% render_navbar  %>
 
-<%= @service_find_by_id %>		
+
+<article class="main-container-service">
+	<section>	
+		<div class="header-page-container">
+			<strong class="header-page-name"><%= t('name_page.headers.service') %></strong>		
+		</div>
+	</section>	
+	
+
+	<section class="container-service">
+						
+		<div class="service-card-name">
+			<span><%= @service_find_by_id.name %></span>			
+		</div>
+
+		<div class="service-card-div">				
+			<div class="service-card-info">
+				<span>Сайт</span>
+				
+				<span><%= @service_find_by_id.url_addres %></span>
+			</div>
+		</div>
+
+		<div class="service-card-div">				
+			<div class="service-card-info">
+				
+				<span class="service-card-info-stars">Звезды</span>					
+				
+				<div class="service-card-stars">
+					<%= render(
+						partial: 'shared/stars_service',
+						locals: {service_category_ids: @service_find_by_id.service_category_ids}
+					)  %>				
+				</div>					
+			</div>
+		</div>
+	
+		<div class="service-card-name">
+				<p>Оставить отзыв по услугам</p>
+		</div>
+
+		<div class="service-card-div">
+			<div class="service-card-info">
+				<hr style="width: 100%; color: #ff9999;">
+			</div>
+		</div>
+
+		<div class="service-card-div">
+			
+			<%= render(
+				partial: 'shared/review', 
+				locals: {service_categories: @service_find_by_id.service_categories}
+				) 
+			%>			
+		</div>
+
+	</section>
+
+
+
+
+</article>

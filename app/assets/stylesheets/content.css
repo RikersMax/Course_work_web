@@ -131,3 +131,15 @@
 	padding-left: 3em;
 	padding-right: 3em;
 }
+
+.bg-ff9999 {
+	background-color: #ff9999;
+}
+
+.service-card-info-center {
+	display: flex;
+	justify-content: center;	
+	line-height: 3em;
+	background-color: #ff9999;
+	width: 90%;
+}
