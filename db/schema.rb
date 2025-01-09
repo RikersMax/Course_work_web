@@ -47,7 +47,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_07_100032) do
 
   create_table "services", force: :cascade do |t|
     t.string "name"
-    t.text "body"
     t.text "description"
     t.string "url_img"
     t.text "url_addres"

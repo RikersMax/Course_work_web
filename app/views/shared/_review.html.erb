@@ -1,25 +1,29 @@
 
 <div class="form-review-container">
-	<%= form_with(url: stars_path, method: 'POST', data: {turbo: false}) do |f| %>	
+	<%= form_with(url: stars_path, method: 'POST', data: {turbo: false}, class: 'form-with') do |f| %>	
 		<% service_categories.each do |serv_cate| %>
 		<div class="form-review-div">
-			<div>
-				<%= f.label({serv_cat_id: serv_cate.id}, serv_cate.category.name)  %>
+			<div class="label-for-stars">
+				<%= f.label({serv_cat_id: serv_cate.id}, t("category.#{serv_cate.category.name}"))  %>
 			</div>				
 			
 			
-
 			<div class="rating-area">
-					<input type="radio" id="<%=serv_cate.id%>[star-5]" name=<%="review_service_category[#{serv_cate.id}]" %> value="star_5">
-					<label for="<%=serv_cate.id%>[star-5]" title="Оценка «5»"></label>	
-					<input type="radio" id="<%=serv_cate.id%>[star-4]" name=<%="review_service_category[#{serv_cate.id}]" %> value="star_4">
-					<label for="<%=serv_cate.id%>[star-4]" title="Оценка «4»"></label>    
-					<input type="radio" id="<%=serv_cate.id%>[star-3]" name=<%="review_service_category[#{serv_cate.id}]" %> value="star_3">
-					<label for="<%=serv_cate.id%>[star-3]" title="Оценка «3»"></label>  
-					<input type="radio" id="<%=serv_cate.id%>[star-2]" name=<%="review_service_category[#{serv_cate.id}]" %> value="star_2">
-					<label for="<%=serv_cate.id%>[star-2]" title="Оценка «2»"></label>    
-					<input type="radio" id="<%=serv_cate.id%>[star-1]" name=<%="review_service_category[#{serv_cate.id}]" %> value="star_1" checked="checked" >
-					<label for="<%=serv_cate.id%>[star-1]" title="Оценка «1»"></label>
+				<input type="radio" id="<%=serv_cate.id%>[star-5]" name=<%="review_service_category[#{serv_cate.id}]" %> value="star_5">
+				<label for="<%=serv_cate.id%>[star-5]" title="Оценка «5»"></label>	
+				<input type="radio" id="<%=serv_cate.id%>[star-4]" name=<%="review_service_category[#{serv_cate.id}]" %> value="star_4">
+				<label for="<%=serv_cate.id%>[star-4]" title="Оценка «4»"></label>    
+				<input type="radio" id="<%=serv_cate.id%>[star-3]" name=<%="review_service_category[#{serv_cate.id}]" %> value="star_3">
+				<label for="<%=serv_cate.id%>[star-3]" title="Оценка «3»"></label>  
+				<input type="radio" id="<%=serv_cate.id%>[star-2]" name=<%="review_service_category[#{serv_cate.id}]" %> value="star_2">
+				<label for="<%=serv_cate.id%>[star-2]" title="Оценка «2»"></label>    
+				<input type="radio" id="<%=serv_cate.id%>[star-1]" name=<%="review_service_category[#{serv_cate.id}]" %> value="star_1" checked="checked" >
+				<label for="<%=serv_cate.id%>[star-1]" title="Оценка «1»"></label>
+			</div>
+		</div>
+		<div class="service-card-div-form">
+			<div class="service-card-info">
+				<hr style="width: 100%; color: #ff9999;">
 			</div>
 		</div>
 		<% end %>

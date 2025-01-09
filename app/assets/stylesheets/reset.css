@@ -31,3 +31,7 @@ ol, ul, li {
 input[type=submit] {
 	font-size: 1em;
 }
+
+a:hover {
+	color: #ff4d4d;
+}

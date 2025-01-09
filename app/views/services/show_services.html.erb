@@ -20,7 +20,7 @@
 			<div class="service-card-info">
 				<span>Сайт</span>
 				
-				<span><%= item.url_addres %></span>
+				<span><%= link_to(item.url_addres, item.url_addres ) %></span>
 			</div>
 		</div>
 
@@ -40,14 +40,14 @@
 
 		<div class="service-card-div">
 			<div class="service-card-img">
-				<%= image_tag(src='https://thumb.tildacdn.com/tild6235-3534-4731-b865-356632393537/-/cover/860x550/center/center/-/format/webp/DSCF8583.jpg', class: 'service-img') %>
+				<%= image_tag(src=item.url_img, class: 'service-img') %>
 			</div>
 		</div>
 
 		<div class="service-card-div">
 			<div class="service-card-desc">
 				
-				<%= content_tag(:p, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vero tempore quod ipsam hic eaque id, sunt vel, magnam et nam quisquam expedita voluptatem reprehenderit nihil iusto sequi. In, reprehenderit.'  , class: 'service-desc') %>
+				<%= content_tag(:p, item.description , class: 'service-desc') %>
 			</div>
 		</div>
 	
@@ -70,6 +70,8 @@
 			%>			
 		</div>
 
+
+		<% if user_signed_in? %>
 		<div class="service-card-div">
 			<div class="service-card-info">
 				<hr style="width: 100%; color: #ff9999;">			
@@ -81,7 +83,7 @@
 				<%= link_to("Оставить отзыв", service_path(item), class: 'btn') %>
 			</div>				
 		</div>
-
+		<% end %>
 	</section>
 <% end %>
 

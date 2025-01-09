@@ -37,9 +37,20 @@
     line-height: 3em;
 }
 
+.form-with {
+    width: 70%;
+}
+
+.label-for-stars {
+    font-weight: bold;
+    min-width: 40%;
+}
+
+
 .form-review-div {
     display: flex;
     justify-content: space-between;
+    padding-top: 1em;
 }
 
 .form-review-radio-list {
@@ -48,6 +59,11 @@
 }
 
 .form-btn-container {
+    display: flex;
+    justify-content: center;    
+}
+
+.service-card-div-form {
     display: flex;
     justify-content: center;    
 }
